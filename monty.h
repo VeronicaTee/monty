@@ -56,3 +56,23 @@ void set_op_tok_error(int error_code);
 /* OPCODE FUNCTIONS */
 void monty_push(stack_t **stack, unsigned int line_number);
 void monty_pall(stack_t **stack, unsigned int line_number);
+
+
+/* CUSTOM STANDARD LIBRARY FUNCTIONS */
+char **strtow(char *str, char *delims);
+char *get_int(int n);
+
+/* ERROR MESSAGES & ERROR CODES */
+int usage_error(void);
+int malloc_error(void);
+int f_open_error(char *filename);
+int unknown_op_error(char *opcode, unsigned int line_number);
+int no_int_error(unsigned int line_number);
+int pop_error(unsigned int line_number);
+int pint_error(unsigned int line_number);
+int short_stack_error(unsigned int line_number, char *op);
+int div_error(unsigned int line_number);
+int pchar_error(unsigned int line_number, char *message);
+
+
+#endif /* __MONTY_H__ */
